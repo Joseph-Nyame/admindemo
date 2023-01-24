@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homeverse - Find your dream house</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+<style>
+  input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #046daa;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #11c4db;
+}
+
+.container1 {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: 30px;
+}
+</style>
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+
+    <div class="overlay" data-overlay></div>
+
+    
+
+    <div class="header-bottom">
+      <div class="container">
+
+        <a href="index.html" class="logo">
+          <h4 class="fa-dashboard">Admin Dashboard</h4>
+        </a>
+
+        <nav class="navbar" data-navbar>
+
+          <div class="navbar-top">
+
+            <a href="#" class="logo">
+              <h4 class="fa-dashboard">Admin Dashboard</h4>
+            </a>
+
+            <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+          </div>
+
+          <div class="navbar-bottom">
+            <ul class="navbar-list">
+
+              <li>
+                <a href="index.html" class="navbar-link" data-nav-link>Homes</a>
+              </li>
+
+              <li>
+                <a href="#" class="navbar-link" data-nav-link>Services</a>
+              </li>
+
+              <li>
+                <a href="#" class="navbar-link" data-nav-link>Assesments</a>
+              </li>
+
+              <li>
+                <a href="#" class="navbar-link" data-nav-link>Contact Service Person</a>
+              </li>
+
+            </ul>
+          </div>
+
+        </nav>
+
+        <div class="header-bottom-actions">
+
+
+         
+          <button class="header-bottom-actions-btn" aria-label="Profile">
+            <a href="#"><ion-icon name="person-outline"></ion-icon></a>
+            <span>Profile</span>
+          </button>
+          <button class="header-bottom-actions-btn" data-nav-open-btn aria-label="Open Menu">
+            <ion-icon name="menu-outline"></ion-icon>
+
+            <span>Menu</span>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+  </header>
+
+
+
+
+
+  <main>
+    <div class="container1">
+      
+      <form action="">
+        <label for="fname">Price</label>
+        <input type="text" id="price" name="price" placeholder="price of home"  required>
+    
+        <label for="lname">Location</label>
+        <input type="text" id="location" name="location" placeholder="Type Location.." required>
+
+    
+        <label for="lname">Sale Type</label>
+        <select name="saleType" id="saleType" required>
+            <option value="" hidden>Choose Option</option>
+            <option value="rent">For Rent</option>
+            <option value="sale">For Sale</option>
+        </select>
+
+        <label for="lname"> Building Type</label>
+        <select name="homeType" id="homeType" required>
+            <option value="" hidden>Choose Option</option>
+            <option value="bungalow">Bungalow</option>
+            <option value="cottage">Cottage</option>
+            <option value="ranch">Ranch</option>
+            <option value="duplex">Duplex</option>
+            <option value="two-family-duplex">Two-family Duplex</option>
+        </select>
+
+        <label for="lname">Building Videos</label>
+        <br>
+        <input type="file" id="homeVid" name="homeVid[]" required accept="video/*" multiple>
+    <br>
+    <br>
+
+    <label for="lname">Building Images</label>
+        <br>
+        <input type="file" id="homeImg" name="homeImg[]" accept="image/*"  required multiple>
+    <br>
+    <br>
+        <label for="subject">Summary Description</label>
+        <textarea id="summDesc" name="summDesc" placeholder="Your message here..." required style="height:150px"></textarea>
+
+        
+
+        <label for="subject">Detail Description</label>
+        <textarea id="detailDesc" name="detailDesc" placeholder="Your message here..." required style="height:150px"></textarea>
+    
+        <input type="submit" id="save-button" value="Add Home" class="btn btn-primary-outline" >
+      </form>
+    </div>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <img src="./assets/images/logo-light.png" alt="Homeverse logo">
+          </a>
+
+          <p class="section-text">
+            Lorem Ipsum is simply dummy text of the and typesetting industry. Lorem Ipsum is dummy text of the printing.
+          </p>
+
+          <ul class="contact-list">
+
+            <li>
+              <a href="#" class="contact-link">
+                <ion-icon name="location-outline"></ion-icon>
+
+                <address>Accra, Ghana</address>
+              </a>
+            </li>
+
+            <li>
+              <a href="tel:+0123456789" class="contact-link">
+                <ion-icon name="call-outline"></ion-icon>
+
+                <span>+0000000000</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="mailto:contact@homeverse.com" class="contact-link">
+                <ion-icon name="mail-outline"></ion-icon>
+
+                <span>johndoe@mail.com</span>
+              </a>
+            </li>
+
+          </ul>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-link-box">
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-list-title">Company</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">About</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Blog</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">FAQ</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Contact us</a>
+            </li>
+
+          </ul>
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-list-title">Services</p>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Login</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">My account</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Terms & Conditions</a>
+            </li>
+
+          </ul>
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-list-title">Customer Care</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Login</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">My account</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">FAQ</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Contact us</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2022 <a href="#">joe</a>. All Rights Reserved
+        </p>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script type="text/javascript">
+   $("#save-button").click(function(e) {
+    e.preventDefault()
+  
+     
+    
+    var price = $("#price").val();
+    var location = $("#location").val();
+    var saleType = $("#saleType").val();
+    var homeImg = [];
+     homeImg.push( $("#homeImg").val())
+    var homeVid = $("#homeVid").val();
+    var homeType = $("#homeType").val();
+    var detailDesc = $("#detailDesc").val();
+    var summDesc = $("#summDesc").val();
+
+    var form = new FormData();
+form.append("price", price);
+form.append("location", location);
+form.append("detailDesc", detailDesc);
+form.append("homeType", homeType);
+form.append("homeVid[]", homeVid);
+form.append("homeImg[]", homeImg);
+form.append("saleType", saleType);
+form.append("summDesc", summDesc);
+// console.log(sessionStorage.getItem("auth"))
+
+if(sessionStorage.getItem("auth") == null){
+  window.location.href = 'login.html'
+}
+
+var settings = {
+  "url": "http://127.0.0.1:8000/api/add-home",
+  "method": "POST",
+  "timeout": 0,
+  "processData": false,
+  "mimeType": "multipart/form-data",
+  "contentType": false,
+  "data": form,
+   headers: { "Authorization": "Bearer " + sessionStorage.getItem("auth")}
+
+};
+
+$.ajax(settings).done(function (response) {
+  var result = JSON.parse(response);
+  // console.log(result);
+  if(result.data == "success"){
+    window.location.href = "homemangement.html"
+  }
+});
+    
+    
+  })
+  </script>
+
+</body>
+
+</html>

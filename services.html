@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homeverse - Find your dream house</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+<style>
+.wrapper
+{
+    max-width: 400px;
+    margin: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+/* Form styles */
+
+
+
+form div
+{
+    width: 100%;
+    
+    margin-bottom: 35px;
+}
+
+/* Input text field styles */
+
+input
+{
+    font-size: 1.1em;
+    font-weight: normal;
+
+   
+
+    width: 85%;
+    margin: 0 auto;
+    height:45px;
+
+    -webkit-transition: box-shadow .3s;
+            transition: box-shadow .3s;
+            transition: .25s linear;
+    text-align: center;
+
+    color: #2d7df5;
+    border: 0;
+    outline: 0;
+    background: #eee;
+    box-shadow: 0 0 0 2px transparent;
+}
+
+
+
+.btn
+{
+   
+
+    width: 50%;
+    height: auto;
+    padding-top: 23px;
+
+    cursor: pointer;
+
+    border: 0;
+   
+    margin-bottom: 50px;
+}
+
+.btn-member,
+.btn-back
+{
+    font-size: .9em;
+
+/*     color: #333; */
+    background: white;
+}
+
+.btn-sign-up,
+.btn-log-in
+{
+    font-size: 1.2em;
+    font-weight: bold;
+
+    color: white;
+
+}
+
+
+
+</style>
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  
+  <header class="header" data-header>
+
+    <div class="overlay" data-overlay></div>
+
+    
+
+    <div class="header-bottom">
+      <div class="container">
+
+        <a href="index.html" class="logo">
+          <h4 class="fa-dashboard">Admin Dashboard</h4>
+        </a>
+
+        <nav class="navbar" data-navbar>
+
+          <div class="navbar-top">
+
+            <a href="#" class="logo">
+              <h4 class="fa-dashboard">Admin Dashboard</h4>
+            </a>
+
+            <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+          </div>
+
+          <div class="navbar-bottom">
+            <ul class="navbar-list">
+
+              <li>
+                <a href="index.html" class="navbar-link" data-nav-link>Homes</a>
+              </li>
+
+              <li>
+                <a href="#" class="navbar-link" data-nav-link>Services</a>
+              </li>
+
+              <li>
+                <a href="#" class="navbar-link" data-nav-link>Assesments</a>
+              </li>
+
+              <li>
+                <a href="#" class="navbar-link" data-nav-link>Contact Service Person</a>
+              </li>
+
+            </ul>
+          </div>
+
+        </nav>
+
+        <div class="header-bottom-actions">
+
+
+         
+          <button class="header-bottom-actions-btn" aria-label="Profile">
+            <a href="#"><ion-icon name="person-outline"></ion-icon></a>
+            <span>Profile</span>
+          </button>
+          <button class="header-bottom-actions-btn" data-nav-open-btn aria-label="Open Menu">
+            <ion-icon name="menu-outline"></ion-icon>
+
+            <span>Menu</span>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+  </header>
+
+
+
+
+
+  <main>
+    <br>
+    <div class="container" >
+
+        <p class="section-subtitle">Our Services</p>
+
+        <h2 class="h2 section-title">Services</h2>
+
+        <ul class="service-list" id="service-output">
+
+         
+
+        </ul>
+        <br>
+        <ul class="service-list" >
+        <li>
+          <div class="service-card" >
+
+            <div class="card-icon">
+              <img src="./assets/images/servie.png" alt="Service icon" style="width: 50px; height: 50px;">
+            </div>
+
+            <h3 class="h3 card-title">
+              <a href="#">Add Service</a>
+            </h3>
+
+            <p class="card-text">
+              Add service for service personnel to sign up to
+            </p>
+
+            <a href="addservice.html"  style="color:rgb(45, 138, 167)"  id="${data.data[i].id}" >
+              <span>Add Service</span>
+
+      
+            </a>
+
+          </div>
+        </li>
+      </ul>
+      </div>
+      <br>
+    
+        
+
+    
+  </main>
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <img src="./assets/images/logo-light.png" alt="Homeverse logo">
+          </a>
+
+          <p class="section-text">
+            Lorem Ipsum is simply dummy text of the and typesetting industry. Lorem Ipsum is dummy text of the printing.
+          </p>
+
+          <ul class="contact-list">
+
+            <li>
+              <a href="#" class="contact-link">
+                <ion-icon name="location-outline"></ion-icon>
+
+                <address>Accra, Ghana</address>
+              </a>
+            </li>
+
+            <li>
+              <a href="tel:+0123456789" class="contact-link">
+                <ion-icon name="call-outline"></ion-icon>
+
+                <span>+0000000000</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="mailto:contact@homeverse.com" class="contact-link">
+                <ion-icon name="mail-outline"></ion-icon>
+
+                <span>johndoe@mail.com</span>
+              </a>
+            </li>
+
+          </ul>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-link-box">
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-list-title">Company</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">About</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Blog</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">FAQ</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Contact us</a>
+            </li>
+
+          </ul>
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-list-title">Services</p>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Login</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">My account</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Terms & Conditions</a>
+            </li>
+
+          </ul>
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-list-title">Customer Care</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Login</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">My account</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">FAQ</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Contact us</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2022 <a href="#">joe</a>. All Rights Reserved
+        </p>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    var settings = {
+  "url": "http://127.0.0.1:8000/api/all-service",
+  "method": "GET",
+  "timeout": 0,
+  headers: { "Authorization": "Bearer " + sessionStorage.getItem("auth")},
+  "processData": false,
+  "mimeType": "multipart/form-data",
+  "contentType": false,
+  
+};
+
+$.ajax(settings).done(function (response) {
+  var data = JSON.parse(response);
+  if(data == null){
+    window.location.href = 'nodata.html'
+  }
+  else{
+
+    var placeholder = document.querySelector("#service-output");
+  var out = "";
+  for (let i = 0; i < data.data.length; i++) {
+  out +=`
+  <li>
+            <div class="service-card" >
+
+              <div class="card-icon">
+                <img src="./assets/images/servie.png" alt="Service icon" style="width: 50px; height: 50px;">
+              </div>
+
+              <h3 class="h3 card-title">
+                <a href="#">${data.data[i].Name}</a>
+              </h3>
+
+              <p class="card-text">
+                Description : ${data.data[i].Desc}
+              </p>
+
+              <a href="#"  style="color:red"  id="${data.data[i].id}" onclick="delservice(${data.data[i].id})">
+                <span>Remove Service</span>
+
+        
+              </a>
+
+            </div>
+          </li>
+  `;
+}
+placeholder.innerHTML =out;
+  }
+
+});
+
+
+
+function delservice(id) {
+  
+  var form = new FormData();
+  form.append("id", id);
+  var settings = {
+ "url": "http://127.0.0.1:8000/api/remove-service/" + id ,
+ "method": "delete",
+ "timeout": 0,
+ "processData": false,
+ "mimeType": "multipart/form-data",
+ "contentType": false,
+ "data": form,
+ "headers":{ "Authorization": "Bearer " + sessionStorage.getItem("auth")}
+};
+
+$.ajax(settings).done(function (response) {
+  var result = JSON.parse(response);
+  if(result.data == "success"){
+    window.location.href = "services.html"
+  }
+  else{
+    window.location.href ='tryagain.html'
+  }
+});
+}
+
+  </script>
+
+</body>
+
+</html> 
